@@ -60,6 +60,6 @@
 
 # shell/custom-packages.sh
 
-# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon ipv6helper"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon ipv6helper"
 # Turbo ACC 网络加速
-# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
