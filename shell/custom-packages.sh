@@ -60,6 +60,10 @@
 
 # shell/custom-packages.sh
 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon ipv6helper"
 # Turbo ACC 网络加速
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
+# 1. 显式排除脚本默认添加的大体积插件 (腾出空间给 Nikki/Lucky)
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-homeproxy -sing-box"
+# 2. 排除不存在或不需要的辅助插件
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-dufs"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon ipv6helper"
