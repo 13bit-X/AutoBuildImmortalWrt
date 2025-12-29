@@ -62,15 +62,15 @@
 
 # --- 1. 核心精简：强制删除原作者预设的大体积包 (腾出约 28MB 空间) ---
 # 必须干掉 homeproxy 和 sing-box，否则绝对装不下 nikki 和 lucky 的内核
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-homeproxy -sing-box -luci-i18n-homeproxy-zh-cn"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-homeproxy -sing-box -luci-i18n-homeproxy-zh-cn"
 # 干掉其他不常用的大体积工具
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-store -luci-app-filemanager -luci-app-dufs -dufs"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-store -luci-app-filemanager -luci-app-dufs -dufs"
 
 # --- 2. 集成你要求的内核、界面及中文包 ---
 # Nikki (Mihomo)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES nikki luci-app-nikki luci-i18n-nikki-zh-cn"
 # Lucky
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES lucky luci-app-lucky luci-i18n-lucky-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES lucky luci-app-lucky"
 
 # --- 3. 基础工具及语言包 (确保全中文) ---
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-upnp luci-i18n-upnp-zh-cn"
