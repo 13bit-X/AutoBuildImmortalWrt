@@ -60,10 +60,14 @@
 
 # shell/custom-packages.sh
 
-# Turbo ACC 网络加速
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
-# 1. 显式排除脚本默认添加的大体积插件 (腾出空间给 Nikki/Lucky)
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-homeproxy -sing-box"
-# 2. 排除不存在或不需要的辅助插件
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-dufs"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon"
+# --- 2. 集成你要求的内核、界面及中文包 ---
+# Nikki (Mihomo)
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES nikki luci-app-nikki luci-i18n-nikki-zh-cn"
+# Lucky
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES lucky luci-app-lucky luci-i18n-lucky-zh-cn"
+
+# --- 3. 基础工具及语言包 (确保全中文) ---
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-upnp luci-i18n-upnp-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-wol luci-i18n-wol-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-ttyd luci-i18n-ttyd-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc luci-theme-argon"
