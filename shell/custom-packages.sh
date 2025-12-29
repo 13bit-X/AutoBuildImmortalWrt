@@ -66,4 +66,4 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-homeproxy -sing-box"
 # 2. 排除不存在或不需要的辅助插件
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES -luci-app-dufs"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon ipv6helper"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon"
