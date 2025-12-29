@@ -58,3 +58,8 @@
 # Bandix流量监控 by timsaya
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-bandix luci-i18n-bandix-zh-cn"
 
+# shell/custom-packages.sh
+
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nikki nikki luci-app-lucky lucky luci-app-upnp luci-app-ttyd luci-app-wol luci-theme-argon ipv6helper"
+# Turbo ACC 网络加速
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
