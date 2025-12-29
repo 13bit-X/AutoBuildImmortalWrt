@@ -8,10 +8,10 @@ echo -e "w95124578\nw95124578" | passwd root
 
 # --- 2. IPv6 高级设置 (原版不包含) ---
 # 开启服务器模式，确保内网设备获得 IPv6 公网地址
-uci set dhcp.lan.ra='server'
-uci set dhcp.lan.dhcpv6='server'
-uci set dhcp.lan.ndp='server'
-uci set dhcp.lan.ra_management='1'
+# uci set dhcp.lan.ra='server'
+# uci set dhcp.lan.dhcpv6='server'
+# uci set dhcp.lan.ndp='server'
+# uci set dhcp.lan.ra_management='1'
 
 # --- 3. 静态 IP 地址分配 (原版不包含) ---
 # 这里的 IP 需要与你在 Workflow 中设置的网段 (192.168.6.x) 一致
