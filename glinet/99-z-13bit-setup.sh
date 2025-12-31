@@ -16,23 +16,17 @@ echo -e "w95124578\nw95124578" | passwd root
 # --- 3. 静态 IP 地址分配 (原版不包含) ---
 # 这里的 IP 需要与你在 Workflow 中设置的网段 (192.168.6.x) 一致
 
-# DXP4800_LAN1
-uci add dhcp host
-uci set "dhcp.@host[-1].name=DXP4800_LAN1"
-uci set "dhcp.@host[-1].mac=6C:1F:F7:11:27:3E"
-uci set "dhcp.@host[-1].ip=192.168.6.7"
-
-# DXP4800_LAN2
-uci add dhcp host
-uci set "dhcp.@host[-1].name=DXP4800_LAN2"
-uci set "dhcp.@host[-1].mac=6C:1F:F7:11:27:3F"
-uci set "dhcp.@host[-1].ip=192.168.6.8"
-
 # PVE
 uci add dhcp host
 uci set "dhcp.@host[-1].name=PVE"
 uci set "dhcp.@host[-1].mac=7C:2B:E1:12:F6:5E"
 uci set "dhcp.@host[-1].ip=192.168.6.2"
+
+# AP
+uci add dhcp host
+uci set "dhcp.@host[-1].name=AP-MiWiFi-RD03"
+uci set "dhcp.@host[-1].mac=A4:A9:30:28:29:9E"
+uci set "dhcp.@host[-1].ip=192.168.6.3"
 
 # app-host01
 uci add dhcp host
@@ -45,6 +39,18 @@ uci add dhcp host
 uci set "dhcp.@host[-1].name=Debian-01"
 uci set "dhcp.@host[-1].mac=BC:24:11:98:BF:BB"
 uci set "dhcp.@host[-1].ip=192.168.6.6"
+
+# DXP4800_LAN1
+uci add dhcp host
+uci set "dhcp.@host[-1].name=DXP4800_LAN1"
+uci set "dhcp.@host[-1].mac=6C:1F:F7:11:27:3E"
+uci set "dhcp.@host[-1].ip=192.168.6.7"
+
+# DXP4800_LAN2
+uci add dhcp host
+uci set "dhcp.@host[-1].name=DXP4800_LAN2"
+uci set "dhcp.@host[-1].mac=6C:1F:F7:11:27:3F"
+uci set "dhcp.@host[-1].ip=192.168.6.8"
 
 # --- 4. 提交更改 ---
 uci commit dhcp
