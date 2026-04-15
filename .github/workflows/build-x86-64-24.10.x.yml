@@ -18,11 +18,11 @@ on:
       custom_router_ip:
         description: "请设置路由器的管理地址(仅对多网口路由器有效) 格式:192.168.x.1 或 10.x.x.1"
         required: true
-        default: "192.168.100.1"
+        default: "192.168.6.1"
       profile:
-        description: '请输入要编译固件大小 单位(MB)'
+        description: "设置固件总分区大小 (单位 MB)。默认 1024 代表 1GB，建议 N5105 设置为 1024-2048"
         required: true
-        default: '1024'
+        default: "1024"
       enable_store:
         description: "集成 store 商店"
         required: false
