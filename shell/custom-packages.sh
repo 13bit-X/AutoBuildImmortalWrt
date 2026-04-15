@@ -1,7 +1,7 @@
 #!/bin/bash
 # ============= imm仓库外的第三方插件==============
 # ============= 若启用 则打开注释 ================
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-unblockneteasemusic luci-i18n-unblockneteasemusic-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-unblockneteasemusic"
 # ============= 但此文件也可以处理仓库内的软件去留 本质上是做了一个PACKAGES字符串的拼接 ================
 
 # 各位注意 如果你构建的固件是硬路由 此文件的注释要酌情考虑是否打开 因为硬路由的闪存空间有限 若构建出来过大或者构建失败 记得调整本文件的注释
